@@ -5,8 +5,8 @@ import "nprogress/nprogress.css"
 
 export function request(config: any){
   const instance = axios.create({
-    /* baseURL: '/api', */
-    baseURL: '**请自己搭后台***',
+  /*   baseURL: 'http://127.0.0.1', */
+    baseURL: '自己搭后台',
     timeout: 5000,
   })
   instance.interceptors.request.use((res) => {

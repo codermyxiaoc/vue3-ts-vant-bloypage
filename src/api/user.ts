@@ -73,3 +73,19 @@ export function getcode(phone: string) {
     }
   })
 }
+export function getforgetpowcode(phone: string) {
+  return request({
+    method: 'post',
+    url: '/api/forgetpowcode',
+    data: {
+      cell_phone: phone
+    }
+  })
+}
+export function getforgetpow(data :any) {
+  return request({
+    url: '/api/forgetpow',
+    method: 'post',
+    data
+  })
+}

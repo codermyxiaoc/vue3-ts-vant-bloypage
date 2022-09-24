@@ -86,6 +86,13 @@ const routes = [
     meta: {
       title: '评论区'
     }
+  },
+  {
+    path: '/forgetpwd',
+    component: () => import('../views/forgetpwd/forgetPwd.vue'),
+    meta: {
+      title: '忘记密码'
+    }
   }
 ]
 

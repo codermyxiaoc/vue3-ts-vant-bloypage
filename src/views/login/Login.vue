@@ -13,6 +13,7 @@
           提交
         </van-button>
         <span class="register">还没有账号，立即<router-link to="/register">注册</router-link></span>
+        
       </div>
     </van-form>
     <div v-else>
@@ -30,6 +31,7 @@
       </div>
     </div>
     <van-dialog />
+    <span class="forgetpwd" @click="router.push('/forgetpwd')"  v-show="isShowlogin">忘记密码</span>
   </div>
 </template>
 
@@ -127,13 +129,13 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 .login_from {
   margin:130px auto;
 }
 .login {
   position: relative;
   height: 100vh;
+  width: 100vw;
 }
 .register{
   display: inline-block;
@@ -155,5 +157,8 @@ export default defineComponent({
   display: inline-block;
   width: 110px;
   height: 1px;
+}
+.forgetpwd {
+  padding: 0 40vw;
 }
 </style>
