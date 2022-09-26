@@ -33,7 +33,7 @@
     <van-dialog />
     <span class="forgetpwd" @click="router.push('/forgetpwd')"  v-show="isShowlogin">忘记密码</span>
     <span class="phonelogin">
-      <svg t="1664157347960" v-show="isShowlogin" @click="router.push('/phonelogin')" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2932"
+      <svg style="margin-top: 3vw" t="1664157347960" v-show="isShowlogin" @click="router.push('/phonelogin')" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2932"
         width="48" height="48">
         <path d="M512.1 512.4m-448 0a448 448 0 1 0 896 0 448 448 0 1 0-896 0Z" fill="#BF67E8" p-id="2933"></path>
         <path
@@ -149,7 +149,7 @@ export default defineComponent({
 
 <style scoped>
 .login_from {
-  margin:130px auto;
+  margin:115px auto;
 }
 .login {
   position: relative;
