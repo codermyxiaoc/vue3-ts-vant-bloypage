@@ -89,3 +89,19 @@ export function getforgetpow(data :any) {
     data
   })
 }
+export function getPhoneLoginCode(phone:string) {
+  return request({
+    url: '/api/logincode',
+    method: 'post',
+    data: {
+      cell_phone: phone
+    }
+  })
+}
+export function getPhoneLogin(data:any) {
+  return request({
+    url: '/api/phonelogin',
+    method: 'post',
+    data
+  })
+}

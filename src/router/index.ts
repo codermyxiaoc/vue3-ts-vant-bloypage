@@ -93,6 +93,13 @@ const routes = [
     meta: {
       title: '忘记密码'
     }
+  },
+  {
+    path: '/phonelogin',
+    component: () => import('../views/phonelogin/phoneLogin.vue'),
+    meat: {
+      title: '手机号登入'
+    }
   }
 ]
 
@@ -101,10 +108,15 @@ const router = createRouter({
   routes,
 })
 const norouter = ['/persig', '/email', '/nickname', '/detuser','/password',]
+const loginonrouter = ['/phonelogin', '/forgetpwd']
 router.beforeEach((to,from,next) => {
   document.title = to.meta.title as string
   if(localStorage.getItem('token')) {
-    next()
+    if (loginonrouter.indexOf(to.fullPath) === -1) {
+      next()
+    } else {
+      next('/home')
+    }
   } else {
     if (norouter.indexOf(to.fullPath) === -1) {
       next()
